@@ -1,4 +1,4 @@
-# Ma Chenyu personal CV homepage
+# Personal CV homepage placeholder
 
 This repository is intended for the GitHub Pages user site:
 
