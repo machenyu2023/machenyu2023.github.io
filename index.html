@@ -3,74 +3,117 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="个人简历与学术主页占位页面">
-    <title>Personal CV | Placeholder</title>
+    <meta name="description" content="Mark 的个人简历、学术主页与研究记录入口">
+    <title>Mark | Academic CV</title>
+    <script>
+      (function () {
+        try {
+          var key = "mark-academic-theme";
+          var stored = localStorage.getItem(key);
+          var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme = stored || (systemDark ? "dark" : "light");
+        } catch (error) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="assets/site.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#home">Personal CV</a>
-      <nav class="top-nav" aria-label="页面导航">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="https://machenyu2023.github.io/blog/">Blog</a>
-      </nav>
+      <a class="brand" href="#home" aria-label="回到首页">
+        <span>Mark</span>
+        <small>Academic CV</small>
+      </a>
+      <div class="header-actions">
+        <nav class="top-nav" aria-label="页面导航">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="https://machenyu2023.github.io/blog/">Blog</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 14.4A7.4 7.4 0 0 1 9.6 3.8 8.5 8.5 0 1 0 20.2 14.4Z"></path>
+          </svg>
+        </button>
+      </div>
     </header>
 
     <main id="home">
       <section class="profile">
-        <div class="portrait-wrap">
-          <div class="portrait" aria-label="Photo placeholder">Photo</div>
-        </div>
-        <div class="profile-copy">
-          <p class="eyebrow">Personal Homepage / Curriculum Vitae</p>
-          <h1>Your Name <span>中文姓名</span></h1>
-          <p class="role">Student / Researcher / Developer</p>
-          <p class="summary">
-            I am building a personal academic and professional homepage for research, projects,
-            publications, awards, and writing. This page is inspired by classic academic CV sites
-            and is ready to be customized with verified personal details.Now or Never.
-          </p>
-          <div class="contact-grid" aria-label="联系方式">
-            <a href="mailto:your.email@example.com">Email</a>
+        <aside class="profile-card" aria-label="个人信息概览">
+          <img class="portrait" src="assets/mark-profile.png" alt="Mark 的个人主页头像">
+          <div class="profile-card-copy">
+            <p class="profile-name">Mark</p>
+            <p class="profile-title">Remote Sensing / Machine Learning / Scientific Writing</p>
+          </div>
+          <div class="profile-links" aria-label="联系方式">
+            <a href="#contact">Contact</a>
             <a href="https://github.com/machenyu2023">GitHub</a>
             <a href="https://machenyu2023.github.io/blog/">Blog</a>
-            <a href="#contact">Contact</a>
+          </div>
+        </aside>
+
+        <div class="profile-copy">
+          <p class="eyebrow">Personal Homepage / Curriculum Vitae</p>
+          <h1>Mark <span>个人简历与学术主页</span></h1>
+          <p class="summary">
+            关注热红外遥感、森林火灾风险评价、机器学习与科研写作。这个主页用于集中展示研究方向、
+            项目实践、论文记录与个人博客，让简历信息和长期笔记形成一个清晰入口。
+          </p>
+          <div class="quick-facts" aria-label="研究概览">
+            <span><strong>Focus</strong> Remote Sensing</span>
+            <span><strong>Methods</strong> Machine Learning</span>
+            <span><strong>Writing</strong> Academic Notes</span>
           </div>
         </div>
       </section>
 
       <section id="about" class="section">
-        <h2>About</h2>
-        <p>
-          这里放一段 100-180 字左右的个人简介。建议写清楚当前身份、所在学校或机构、
-          研究方向、技术栈、正在做的项目，以及希望别人通过这个主页了解你的重点。
-        </p>
-        <p>
-          我的研究方向包括森林火灾风险评价、热异常识别、机器学习、热红外遥感、即时遥感。
-          我也维护一个个人博客，用来记录论文阅读、项目实践和技术笔记。
-        </p>
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>个人简介</h2>
+        </div>
+        <div class="prose-block">
+          <p>
+            我的研究兴趣包括森林火灾风险评价、热异常识别、机器学习、热红外遥感与即时遥感。
+            我也维护一个个人博客，用来记录论文阅读、项目实践、逻辑写作训练和技术笔记。
+          </p>
+          <p>
+            主页中的教育经历、发表成果、获奖经历与联系方式仍可继续补充。当前版本优先保证结构清晰、
+            阅读舒适，并与博客保持统一的蓝色学术风格。
+          </p>
+        </div>
       </section>
 
       <section id="news" class="section">
-        <h2>News</h2>
+        <div class="section-heading">
+          <p class="eyebrow">News</p>
+          <h2>近期动态</h2>
+        </div>
         <ul class="timeline">
           <li>
-            <time>2026.06</time>
-            <span>个人简历主页上线，博客继续保留在 <a href="https://machenyu2023.github.io/blog/">/blog/</a>。</span>
+            <time>2026.07</time>
+            <span>个人主页与博客完成视觉统一，增加浅色/深色主题切换。</span>
           </li>
           <li>
             <time>2026.06</time>
-            <span>待补充近期论文、项目、比赛、实习、奖项或课程成果。</span>
+            <span>个人简历主页上线，博客继续保留在 <a href="https://machenyu2023.github.io/blog/">/blog/</a>。</span>
           </li>
         </ul>
       </section>
 
       <section id="education" class="section">
-        <h2>Education</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2>教育经历</h2>
+        </div>
         <div class="entry">
           <div>
             <h3>University / School Name</h3>
@@ -78,57 +121,63 @@
           </div>
           <time>20XX - Present</time>
         </div>
-        <ul>
-          <li>GPA / ranking / core courses can be placed here.</li>
-          <li>Advisor, lab, thesis title, or research training can be placed here.</li>
+        <ul class="compact-list">
+          <li>可补充 GPA、排名、核心课程、导师、实验室或毕业论文题目。</li>
+          <li>建议保留一到两条最能说明研究训练和专业能力的信息。</li>
         </ul>
       </section>
 
       <section id="research" class="section">
-        <h2>Research Interests</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Research</p>
+          <h2>研究方向</h2>
+        </div>
         <div class="tag-list" aria-label="研究方向">
           <span>Remote Sensing</span>
+          <span>Thermal Infrared</span>
+          <span>Forest Fire Risk</span>
           <span>Machine Learning</span>
-          <span>Infrared Remote Sensing</span>
           <span>Data Visualization</span>
           <span>Scientific Writing</span>
         </div>
       </section>
 
       <section id="publications" class="section">
-        <h2>Publications</h2>
-        <p class="muted">Add papers, preprints, reports, or manuscripts here. Keep the format consistent.</p>
+        <div class="section-heading">
+          <p class="eyebrow">Publications</p>
+          <h2>论文与成果</h2>
+        </div>
         <ol class="publication-list">
           <li>
-            <strong>Author Name</strong>, Coauthor Name.
-            "Paper title goes here."
-            <em>Journal / Conference</em>, 20XX.
-            <a href="#">Link</a>
+            <strong>待更新。</strong>
+            可按作者、题名、期刊/会议、年份、链接的顺序添加论文、预印本、报告或数据集。
           </li>
           <li>
-            <strong>Author Name</strong>, Coauthor Name.
-            "Another paper or project report title."
-            <em>Venue</em>, 20XX.
-            <a href="#">PDF</a>
+            <strong>Project report / manuscript.</strong>
+            保持引用格式一致，并优先放置已公开链接或 DOI。
           </li>
         </ol>
       </section>
 
       <section id="projects" class="section">
-        <h2>Projects</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>项目实践</h2>
+        </div>
         <div class="project-list">
           <article class="project">
+            <p class="project-kicker">Writing System</p>
             <h3>Personal Blog</h3>
             <p>
-              A Hugo-based writing site deployed through GitHub Pages, used for technical notes,
-              academic reading, and project records.
+              基于 Hugo 与 GitHub Pages 的写作站点，用于沉淀阅读笔记、方法总结和研究思考。
             </p>
             <a href="https://machenyu2023.github.io/blog/">View Blog</a>
           </article>
           <article class="project">
-            <h3>Research / Coding Project</h3>
+            <p class="project-kicker">Research Code</p>
+            <h3>GitHub Portfolio</h3>
             <p>
-              Add a concise project description: problem, method, your contribution, and result.
+              可继续补充公开代码、数据处理流程、图表复现或遥感分析项目。
             </p>
             <a href="https://github.com/machenyu2023">GitHub</a>
           </article>
@@ -136,7 +185,10 @@
       </section>
 
       <section id="experience" class="section">
-        <h2>Experience</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>经历</h2>
+        </div>
         <div class="entry">
           <div>
             <h3>Role or Position</h3>
@@ -144,14 +196,17 @@
           </div>
           <time>20XX - 20XX</time>
         </div>
-        <ul>
-          <li>Describe your work with measurable outcomes when available.</li>
-          <li>Keep each bullet short and concrete.</li>
+        <ul class="compact-list">
+          <li>用可验证的结果描述工作，例如数据规模、方法贡献、工具链或产出链接。</li>
+          <li>每条经历建议控制在 2-3 个要点，便于快速浏览。</li>
         </ul>
       </section>
 
       <section id="awards" class="section">
-        <h2>Awards & Honors</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Awards</p>
+          <h2>荣誉奖项</h2>
+        </div>
         <ul class="timeline">
           <li>
             <time>20XX</time>
@@ -165,17 +220,21 @@
       </section>
 
       <section id="contact" class="section contact">
-        <h2>Contact</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>联系</h2>
+        </div>
         <p>
-          Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
-          GitHub: <a href="https://github.com/machenyu2023">GitHub profile</a><br>
-          Blog: <a href="https://machenyu2023.github.io/blog/">Personal blog</a>
+          Email: 待更新<br>
+          GitHub: <a href="https://github.com/machenyu2023">github.com/machenyu2023</a><br>
+          Blog: <a href="https://machenyu2023.github.io/blog/">machenyu2023.github.io/blog/</a>
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Copyright © 2026. Last updated: June 2026.</p>
+      <p>Copyright © 2026 Mark. Last updated: July 2026.</p>
     </footer>
+    <script src="assets/theme.js" defer></script>
   </body>
 </html>
