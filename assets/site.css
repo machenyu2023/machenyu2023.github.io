@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+  --site-width: 1180px;
   --bg: #f4f8fc;
   --bg-wash: #e9f3fb;
   --paper: #ffffff;
@@ -47,8 +48,8 @@ body {
   background: linear-gradient(180deg, var(--bg-wash) 0, var(--bg) 390px);
   color: var(--ink);
   font-family: Georgia, "Times New Roman", "Noto Serif SC", "Source Han Serif SC", "Microsoft YaHei", serif;
-  font-size: 15.5px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 a {
@@ -63,7 +64,7 @@ a:hover {
 
 main,
 .site-footer {
-  width: min(1080px, calc(100% - 40px));
+  width: min(var(--site-width), calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -82,10 +83,10 @@ main,
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  width: min(1080px, calc(100% - 40px));
-  min-height: 72px;
+  width: min(var(--site-width), calc(100% - 40px));
+  min-height: 56px;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .brand {
@@ -99,12 +100,12 @@ main,
 }
 
 .brand span {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .brand small {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
 }
 
@@ -121,7 +122,7 @@ main,
   justify-content: flex-end;
   gap: 8px 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 .top-nav a {
@@ -138,8 +139,8 @@ main,
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--line);
   border-radius: 50%;
   background: var(--paper);
@@ -155,8 +156,8 @@ main,
 }
 
 .theme-icon {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -178,16 +179,16 @@ main,
 
 .profile {
   display: grid;
-  grid-template-columns: 272px minmax(0, 1fr);
-  gap: 36px;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 28px;
   align-items: center;
-  padding: 42px 0 30px;
+  padding: 24px 0 18px;
   border-bottom: 1px solid var(--line);
 }
 
 .profile-card {
   min-width: 0;
-  padding: 15px;
+  padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: color-mix(in srgb, var(--paper) 88%, transparent);
@@ -205,15 +206,15 @@ main,
 }
 
 .profile-card-copy {
-  padding: 13px 0 10px;
+  padding: 10px 0 8px;
   border-bottom: 1px solid var(--line);
 }
 
 .profile-name {
-  margin: 0 0 4px;
+  margin: 0 0 2px;
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -221,28 +222,28 @@ main,
 .profile-title {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 12.5px;
+  line-height: 1.35;
 }
 
 .profile-links {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  padding-top: 11px;
+  gap: 6px;
+  padding-top: 8px;
 }
 
 .profile-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 34px;
+  min-height: 30px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
   color: var(--accent-strong);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -257,10 +258,10 @@ main,
 }
 
 .eyebrow {
-  margin: 0 0 10px;
+  margin: 0 0 5px;
   color: var(--mark);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 750;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -276,82 +277,83 @@ ol {
 }
 
 h1 {
-  margin-bottom: 12px;
-  font-size: 42px;
+  margin-bottom: 8px;
+  font-size: 36px;
   line-height: 1.12;
   letter-spacing: 0;
 }
 
 h1 span {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   color: var(--muted);
-  font-size: 23px;
+  font-size: 19px;
   font-weight: 500;
 }
 
 h2 {
   margin: 0;
   color: var(--accent-strong);
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.25;
   letter-spacing: 0;
 }
 
 h3 {
-  margin-bottom: 4px;
-  font-size: 19px;
+  margin-bottom: 2px;
+  font-size: 17px;
   line-height: 1.35;
 }
 
 .summary {
-  max-width: 760px;
-  margin-bottom: 16px;
+  max-width: none;
+  margin-bottom: 12px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 15.5px;
 }
 
 .quick-facts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  max-width: 760px;
+  gap: 8px;
+  max-width: none;
 }
 
 .quick-facts span {
   min-width: 0;
-  padding: 9px 11px;
+  padding: 6px 9px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
   color: var(--muted);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 13px;
+  font-size: 12.5px;
+  line-height: 1.4;
 }
 
 .quick-facts strong {
   display: block;
   color: var(--accent-strong);
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
 }
 
 .section {
-  padding: 26px 0 17px;
+  padding: 15px 0 10px;
   border-bottom: 1px solid var(--line);
 }
 
 .section-heading {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
 .section-heading .eyebrow {
-  margin: 0 0 3px;
+  margin: 0 0 2px;
 }
 
 .prose-block {
-  max-width: 860px;
+  max-width: none;
 }
 
 .prose-block p,
@@ -359,9 +361,17 @@ h3 {
   color: var(--muted);
 }
 
+.prose-block p {
+  margin-bottom: 6px;
+}
+
+.prose-block p:last-child {
+  margin-bottom: 0;
+}
+
 .timeline {
   display: grid;
-  gap: 4px;
+  gap: 0;
   margin: 0;
   padding-left: 0;
   list-style: none;
@@ -369,9 +379,9 @@ h3 {
 
 .timeline li {
   display: grid;
-  grid-template-columns: 100px minmax(0, 1fr);
-  gap: 14px;
-  padding: 8px 0;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 12px;
+  padding: 5px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -388,8 +398,8 @@ h3 {
 .entry {
   display: flex;
   justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 8px;
+  gap: 14px;
+  margin-bottom: 5px;
 }
 
 .entry p {
@@ -407,31 +417,32 @@ h3 {
   margin-bottom: 0;
   padding-left: 1.3em;
   color: var(--muted);
+  line-height: 1.5;
 }
 
 .tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 7px;
 }
 
 .tag-list span {
   display: inline-flex;
   align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
+  min-height: 29px;
+  padding: 0 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--paper);
   color: var(--accent-strong);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .publication-list {
   display: grid;
-  gap: 12px;
+  gap: 6px;
   margin: 0;
   padding-left: 22px;
 }
@@ -443,13 +454,13 @@ h3 {
 .project-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 10px;
 }
 
 .project {
   position: relative;
   min-width: 0;
-  padding: 16px;
+  padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -465,22 +476,22 @@ h3 {
 }
 
 .project-kicker {
-  margin: 0 0 8px;
+  margin: 0 0 5px;
   color: var(--mark);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 750;
   text-transform: uppercase;
 }
 
 .project p:not(.project-kicker) {
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   color: var(--muted);
 }
 
 .project a {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 750;
   text-decoration: none;
 }
@@ -495,10 +506,10 @@ h3 {
 }
 
 .site-footer {
-  padding: 24px 0 32px;
+  padding: 18px 0 24px;
   color: var(--muted);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .site-footer p {
@@ -508,15 +519,14 @@ h3 {
 @media (max-width: 860px) {
   .profile {
     grid-template-columns: 1fr;
-    gap: 26px;
+    gap: 18px;
     align-items: start;
   }
 
   .profile-card {
-    max-width: 330px;
+    max-width: 240px;
   }
 
-  .quick-facts,
   .project-list {
     grid-template-columns: 1fr;
   }
@@ -530,19 +540,19 @@ h3 {
 @media (max-width: 720px) {
   main,
   .site-footer {
-    width: min(100% - 28px, 1080px);
+    width: min(100% - 24px, var(--site-width));
   }
 
   .site-header {
     position: static;
   }
 
-  .site-header-inner {
+.site-header-inner {
     align-items: flex-start;
     flex-direction: column;
-    width: min(100% - 28px, 1080px);
+    width: min(100% - 24px, var(--site-width));
     min-height: 0;
-    padding: 12px 0;
+    padding: 8px 0;
   }
 
   .header-actions {
@@ -556,23 +566,23 @@ h3 {
   }
 
   .profile {
-    padding-top: 28px;
+    padding-top: 18px;
   }
 
   .profile-card {
-    max-width: 290px;
+    max-width: 220px;
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 31px;
   }
 
   h1 span {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .summary {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .timeline li,
