@@ -49,13 +49,27 @@
 
     <main id="home">
       <section class="profile">
-        <aside class="profile-card" aria-label="个人信息概览">
-          <img class="portrait" src="assets/mark-profile.png" alt="Mark 的个人主页头像">
+        <aside class="profile-side" aria-label="个人信息概览">
+          <div class="profile-card">
+            <img class="portrait" src="assets/mark-profile.png" alt="Mark 的个人主页头像">
+          </div>
+          <div class="profile-links profile-links-mobile" aria-label="联系方式">
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/machenyu2023">GitHub</a>
+            <a href="https://machenyu2023.github.io/blog/">Blog</a>
+          </div>
         </aside>
 
         <div class="profile-copy">
           <p class="eyebrow">Personal Homepage / Curriculum Vitae</p>
-          <h1>Mark <span>个人简历与学术主页</span></h1>
+          <div class="profile-title-row">
+            <h1>Mark <span>个人简历与学术主页</span></h1>
+            <div class="profile-links profile-links-desktop" aria-label="联系方式">
+              <a href="#contact">Contact</a>
+              <a href="https://github.com/machenyu2023">GitHub</a>
+              <a href="https://machenyu2023.github.io/blog/">Blog</a>
+            </div>
+          </div>
           <p class="summary">
             关注热红外遥感、森林火灾风险评价、机器学习与科研写作。这个主页用于集中展示研究方向、
             项目实践、论文记录与个人博客，让简历信息和长期笔记形成一个清晰入口。
@@ -64,11 +78,6 @@
             <span><strong>Focus</strong> Remote Sensing</span>
             <span><strong>Methods</strong> Machine Learning</span>
             <span><strong>Writing</strong> Academic Notes</span>
-          </div>
-          <div class="profile-links" aria-label="联系方式">
-            <a href="#contact">Contact</a>
-            <a href="https://github.com/machenyu2023">GitHub</a>
-            <a href="https://machenyu2023.github.io/blog/">Blog</a>
           </div>
         </div>
       </section>
